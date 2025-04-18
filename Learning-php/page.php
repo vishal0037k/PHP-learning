@@ -1,114 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="icon" type="favicon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfcoTwHrfGAUBiFJv5FedKRwdXpd8mkStN-Q&s">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple page</title>
     <style>
-        *{
+        * {
             margin: 0%;
             padding: 0%;
             box-sizing: border-box;
             font-family: sans-serif;
         }
-     .main-div{
-        margin: 20px auto;
-        display: flex;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
-     }
-     .box{
-        height: 300px;
-        width: 300px;
-        border: 2px solid black;
-        margin: 20px auto;
-     }
-     .box img{
-        padding: 10px;
-        height: 100%;
-        width: 100%;
-     }
-     h1{
-        text-align: center;
-        color: red;
-        margin: 20px auto;
-     }
-     
-/* NAVBAR STYLING  */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #333;
-  padding: 0.75rem 1rem;
-  color: #fff;
-  position: sticky;
-  top: 0px;
-}
 
-.logo img{
- height: 100px;
- width: 300px;
-}
+        .main-div {
+            margin: 20px auto;
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-}
+        .box {
+            height: 300px;
+            width: 300px;
+            border: 2px solid black;
+            margin: 20px auto;
+        }
 
-.nav-links li a {
-  color: #fff;
-  text-decoration: none;
-  padding: 8px 12px;
-  transition: background 0.3s;
-}
+        .box img {
+            padding: 10px;
+            height: 100%;
+            width: 100%;
+        }
 
-.nav-links li a:hover {
-  background: #555;
-  border-radius: 4px;
-}
+        h1 {
+            text-align: center;
+            color: red;
+            margin: 20px auto;
+        }
 
-/* Hamburger for mobile */
-.hamburger {
-  display: none;
-  font-size: 1.8rem;
-  cursor: pointer;
-}
+        /* NAVBAR STYLING  */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 0.75rem 1rem;
+            color: #fff;
+            position: sticky;
+            top: 0px;
+        }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .nav-links {
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background: #333;
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    display: none;
-  }
+        .logo img {
+            height: 100px;
+            width: 300px;
+        }
 
-  #menu-toggle:checked + .hamburger + .nav-links {
-    display: flex;
-  }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+        }
 
-  .hamburger {
-    display: block;
-  }
-}
+        .nav-links li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 12px;
+            transition: background 0.3s;
+        }
 
-#menu-toggle {
-  display: none;
-}
+        .nav-links li a:hover {
+            background: #555;
+            border-radius: 4px;
+        }
 
-     </style>
+        /* Hamburger for mobile */
+        .hamburger {
+            display: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                position: absolute;
+                top: 60px;
+                right: 0;
+                background: #333;
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                display: none;
+            }
+
+            #menu-toggle:checked+.hamburger+.nav-links {
+                display: flex;
+            }
+
+            .hamburger {
+                display: block;
+            }
+        }
+
+        #menu-toggle {
+            display: none;
+        }
+    </style>
 </head>
+
 <body>
     <!-- make a variable of a box and print it multiple times  -->
     <?php
-$navbar = "
+    $navbar = "
 <nav class='navbar'>
   <div class='logo'>
   <img src = 'https://graphicdesigneye.com/images/automobile-logo-design-service.png' alt = 'logo'></img>
@@ -137,13 +142,32 @@ $navbar = "
     ";
     ?>
 
-<?php
-print $navbar;
-print "<h1>let's print these boxes div multiple times jst like components.</h1>";
-echo "<br/>";
-print $box_1;
-print $box_1;
+    <?php
+    print $navbar;
+    print "<h1>let's print these boxes div multiple times jst like components.</h1>";
+    echo "<br/>";
+    print $box_1;
+    print $box_1;
+
+    print "<hr>";
+    echo "<br/>";
 ?>
 
+
+ <!-- let's add dynamic styling  --> 
+<?php
+$h3_color = "green";
+print "<p style = 'text-align: center;'>ADD DYNAMIC STYLING IN THE HEADINGS";  
+echo "<br/>"; echo "<br/>";
+?>
+<h3 style="color:<?php echo $h3_color;?>">This is first H 3</h3>
+<h3 style="color:<?php echo $h3_color;?>">This is second H 3</h3>
+<h3 style="color:<?php echo $h3_color;?>">This is third H 3</h3>
+
+<?php
+print "<hr>";
+echo "<br/>";
+?>
 </body>
+
 </html>

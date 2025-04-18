@@ -9,7 +9,7 @@ $profession = "Developer";
 print "COMBINE THE TEXT USING VARIABLES"; echo "<br/>"; 
 echo "My name is "; echo $name; print $surname; echo ". I am "; echo $age; echo " years old";
 echo " and i'm a "; print $profession;
-print "<br/>"; echo "<br/>"; echo "<hr/>";
+echo "<br/>"; echo "<br/>"; echo "<hr/>";
 
 // Make numerical calculator using variables //
 print "CALCULATOR USING VARIABLES"; echo "<br/>";  print "<br/>";
@@ -35,4 +35,5 @@ print $value_of_a;
 print $value_of_b;
 print $value_of_c;
 print "<br>";  echo "<br/>";  echo "<hr/>";
+
 ?>
