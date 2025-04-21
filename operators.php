@@ -85,6 +85,7 @@ $operators = "
 
  print $operators;
  print "<br/>";
+ print "<hr/>";
 
  print "
  1. Arithmatic operators = Plus(+), Minus(-), Divide(/), Multiply(*), Exponential(**).
@@ -122,85 +123,186 @@ print "<br/>";
 print "<br/>";
 print "<br/>";
 print "<br/>";
+print "<hr/>";
  
+print "
+2. Assignment operator [=].
+";
+print "<br/>";
+ // EXAMPLE//
+$a = 10;
+$b = 20;
+// Gives same result //
+//  print $a = $a + $b; //
+print  $a += $b;
+
+ print "<br/>";
+ print "<br/>";
+ print "<br/>";
+print "<hr/>";
+
  print "
- 2. Integer = Numbers 0 - 9.
+ 3. Comparison Operators [==, ===, !=, not equal to <>, !==, >, <, >=, <=, Spaceship <=> ].
  ";
  print "<br/>";
  // EXAMPLE//
- $number = 10+10;
- print var_dump($number);
- print "<br/>";
- print "<br/>";
+ $comp_a = 10;
+ $comp_b = 10;
+ $comp_c = 20;
+ print "a = 10, b = 10, c = 20";
  print "<br/>";
 
+ print "a == b : ";
+ print var_dump($comp_a == $comp_b);
+ print "<br/>";
+
+ print "a != b : ";
+ print var_dump($comp_a != $comp_b);
+ print "<br/>";
+
+ print "a === b : ";
+ print var_dump($comp_a === $comp_c);
+ print "<br/>";
+ print "<br/>";
+ print "<br/>";
+ print "<hr/>";
+
  print "
- 3. Float = Decimal values 0.0 -9.9.
+ 4. Increment (+1) / Decrement (-1).
  ";
  print "<br/>";
  // EXAMPLE//
- $float = 10.10;
- print var_dump($float);
- print "<br/>";
- print "<br/>";
+ $inc_value = 10;
+ $dec_value = 10;
+ print "Value 10";
  print "<br/>";
 
+ print "Pre increment ++Value first display then increment : ";
+ print ++$inc_value;
+
+ print "<br/>";
+ print "Post increment Value++ first increment then display : ";
+ print $inc_value++;
+
+ print "<br/>";
+ print "Pre decrement --Value first increment then display : ";
+ print --$dec_value;
+
+ print "<br/>";
+ print "Post decrement Value-- first increment then display : ";
+ print $dec_value--;
+
+ print "<br/>";
+ print "<br/>";
+ print "<hr/>";
+
  print "
- 4. Boolean = True / False.
+ 5. Logical operators. [ AND && , OR ||, NOT !]";
+ print "<br/>";
+ // EXAMPLE//
+$log_1 = 10;
+$log_2 = 10;
+$log_3 = 20;
+$log_4 = 20;
+print "Log 1 = " . $log_1 . " / Log 2 = " . $log_2 . " and Log 3 = ". $log_3 . " / Log 4 = " . $log_4 ;
+ print "<br/>";
+
+ print "AND : 1 == 2 && 3 ==4 : ";
+ print var_dump($log_1 == $log_2 && $log_3 == $log_4);
+ print "<br/>";
+
+ print "AND : 1 == 2 && 1 == 3 : ";
+ print var_dump($log_1 == $log_2 && $log_1 == $log_3);
+ print "<br/>";
+
+ print "OR : 1 == 2 || 3 ==4 : ";
+ print var_dump($log_1 == $log_2 || $log_3 == $log_4);
+ print "<br/>";
+
+ print "OR : 1 == 2 || 1 == 3 : ";
+ print var_dump($log_1 == $log_2 || $log_1 == $log_3);
+ print "<br/>";
+
+ print "NOT : 1 != 2 : ";
+ print var_dump($log_1 != $log_2 );
+ print "<br/>";
+
+ print "NOT : 1 != 3 : ";
+ print var_dump($log_1 != $log_3 );
+ print "<br/>";
+ print "<br/>";
+ print "<hr/>";
+
+ print "
+ 6. String operators.
  ";
  print "<br/>";
  // EXAMPLE//
- $bool = True;
- print var_dump($bool);
+ $str_1 = "My name is ";
+ $str_2 = "Vishal.";
+ $age = 22;
+
+ print "string 1 = My name is , string 2 = Vishal.";
  print "<br/>";
+
+ print $str_1 . $str_2;
  print "<br/>";
+
+ print "Hiee i am " . $str_2 . ' My age is ' . $age;
  print "<br/>";
+
+ // String concatination or dot concatination //
+ $str_1 .= $str_2 .= $age;
+ print $str_1;
+ print "<br/>";
+
+ print "<br/>";
+ print "<hr/>";
 
  print "
- 5. Null = 'Empty'.
+ 7. Array operators/ conditional operators (if, if-else, else-if, swith).
  ";
  print "<br/>";
- // EXAMPLE//
- $nul = null;
- print var_dump($nul);
+ print "Conditional statement if-else";
  print "<br/>";
- print "<br/>";
- print "<br/>";
-
- print "
- 6. Array = [ collection of multiple datatypes].
- ";
- print "<br/>";
- // EXAMPLE//
- $arr = ["abc", "def", "ghi", 500, false];
- print var_dump($arr);
- print "<br/>";
+$age_1 = 15;
+if($age_1 >= 18){
+  print "Age is " . $age_1 . " which is [greater] then or equal to 18.";
+}else {
+  print "Age is " . $age_1 . " which is [less] then or equal to 18.";
+}
  print "<br/>";
  print "<br/>";
 
- print "
- 7. Object = object (class).
- ";
- print "<br/>";
- // EXAMPLE//
-//  $obj = new className();
-//  print var_dump($obj);
- print "<br/>";
- print "<br/>";
+ print "Switch statement.";
  print "<br/>";
 
- print "
- 8. Recourse = External library resource.
- ";
+ $day = "Monday";
+ print $day;
  print "<br/>";
-  // EXAMPLE special datatype uded for external library or api connection //
-  $connection = ftp_connect("127.0.0.1") or die("Local host not found");
-  print var_dump($connection);
-  print "<br/>";
-  print "<br/>";
-  print "<br/>";
-
-
+ switch ($day) {
+  case 'Monday':
+    print "Today is " . $day;
+    break;
+    case 'Tuesday':
+      print "Today is " . $day;
+      break;
+      case 'Wednesday':
+        print "Today is " . $day;
+        break;
+        case 'Thursday':
+          print "Today is " . $day;
+          break;
+          case 'Friday':
+            print "Today is " . $day;
+            break;
+  default:
+    print 'No day matched';
+    break;
+ }
+ print "<br/>";
+ print "<br/>";
+ print "<hr/>";
 
   /* COMMENTS In PHP */
   // COMMENTS In PHP //
