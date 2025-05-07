@@ -72,5 +72,26 @@ for($i = 0; $i<count($users_main); $i++){
   
 
 print "<hr>";
+print "<br>";
+print "<br>";
 
+// Array Modification - adding elements in array using Push method //
+print("<h1> Array Modification - adding elements in array using Push method , use pop for removing & splice for multiple</h1>");
+print("<br/>");
+$add_user = ["user1", "user2", "user3"];
+print("Before Array adding : ");
+print_r($add_user);
+print("<br/>");
+
+print("After Array adding : ");
+array_push($add_user, "user4");
+print_r($add_user);
+print("<br/>");
+
+print("<hr/>");
+print("<br/>");
+
+print("<h3>Using Splice method for multiple elements it always starts from last: </h3>");
+array_splice($add_user, -3,1);
+print_r($add_user);
 ?>
